@@ -18,7 +18,7 @@ bool_polling = True
 @tb.message_handler(content_types=['text'])
 def send_echo(message):
     if message.text=="/start":
-        tb.send_message(message.chat.id, "Добро пожаловать!/n/n/start/n/help")
+        tb.send_message(message.chat.id, "Добро пожаловать!\n\n/start\n/help")
     elif message.text=="/help":
         tb.send_message(message.chat.id, "Чем могу помочь?")
     elif message.text=="/stop":
