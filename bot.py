@@ -8,12 +8,12 @@ token = os.getenv("TOKEN")
 tb = telebot.TeleBot(token)
 
 """
-@bot.message_handler(commands=['start', 'help'])
+@tb.message_handler(commands=['start', 'help'])
 def handle_start_help(message):
     tb.send_message(message.chat.id, "Чем могу помочь?")
 """
 
-@bot.message_handler(content_types=['text'])
+@tb.message_handler(content_types=['text'])
 def send_echo(message):
     if message.text=="/start":
         tb.send_message(message.chat.id, "Добро пожаловать!")
