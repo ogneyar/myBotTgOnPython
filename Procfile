@@ -1,1 +1,1 @@
-web: python my.py
+web: python cgi-bin/
