@@ -4,11 +4,21 @@ import telebot
 
 tb = telebot.TeleBot("1345314264:AAH-XncoXXYvWsyBZwM7m38I0fm-BC6gp7w")
 
-
+"""
+@bot.message_handler(commands=['start', 'help'])
+def handle_start_help(message):
+    tb.send_message(message.chat.id, "Чем могу помочь?")
+"""
 
 @bot.message_handler(content_types=['text'])
 def send_echo(message):
-    tb.send_message(message.chat.id, message.text)
+    if message.text=="/start":
+        tb.send_message(message.chat.id, "Добро пожаловать!")
+    elif message.text=="/help":
+        tb.send_message(message.chat.id, "Чем могу помочь?")
+    else:
+        tb.send_message(message.chat.id, "Я не понимаю(")
+    
 
 tb.polling( none_stop = True )
 
