@@ -24,7 +24,7 @@ def send_echo(message):
     
 
 tb.polling( none_stop = True )
-
+#tb.polling( none_stop = False )
 
 """
 # Upon calling this function, TeleBot starts polling the Telegram servers for new messages.
