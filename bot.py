@@ -3,7 +3,7 @@
 import telebot
 import os
  
-token = os.environ["TOKEN"])
+token = os.getenv["TOKEN"]
 
 tb = telebot.TeleBot(token)
 
