@@ -13,18 +13,23 @@ def handle_start_help(message):
     tb.send_message(message.chat.id, "Чем могу помочь?")
 """
 
+bool_polling = True
+
 @tb.message_handler(content_types=['text'])
 def send_echo(message):
     if message.text=="/start":
-        tb.send_message(message.chat.id, "Добро пожаловать!")
+        tb.send_message(message.chat.id, "Добро пожаловать!/n/n/start/n/help")
     elif message.text=="/help":
         tb.send_message(message.chat.id, "Чем могу помочь?")
+    elif message.text=="/stop":
+        bool_polling = False
+    elif message.text=="/exit":
+        bool_polling = False
     else:
         tb.send_message(message.chat.id, "Я не понимаю(")
     
 
-tb.polling( none_stop = True )
-#tb.polling( none_stop = False )
+tb.polling( none_stop = bool_polling )
 
 """
 # Upon calling this function, TeleBot starts polling the Telegram servers for new messages.
