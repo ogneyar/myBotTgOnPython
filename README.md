@@ -1,3 +1,3 @@
-# pytest1app
+# myBotTgOnPython
 
 Тест тг бота на питоне
