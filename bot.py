@@ -31,7 +31,7 @@ def send_echo(message):
         tb.send_message(message.chat.id, "Я не понимаю(")
     
 
-tb.polling( none_stop = bool_polling )
+#tb.polling( none_stop = bool_polling )
 
 """
 # Upon calling this function, TeleBot starts polling the Telegram servers for new messages.
