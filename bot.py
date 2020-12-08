@@ -4,7 +4,7 @@ exit()
 
 import telebot
 import os
- 
+
 token = os.getenv("TOKEN")
 
 tb = telebot.TeleBot(token)
@@ -29,8 +29,8 @@ def send_echo(message):
         bool_polling = False
     else:
         tb.send_message(message.chat.id, "Я не понимаю(")
-    
 
+# для непрерывной работы необходимо раскомментировать polling
 #tb.polling( none_stop = bool_polling )
 
 """
